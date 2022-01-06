@@ -1,5 +1,6 @@
 .appContainer  {
     background-color: rgb(233, 233, 233);
+    max-height: 100%;
 }
 
 .topbar {
