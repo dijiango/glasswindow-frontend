@@ -40,6 +40,8 @@ export default function SignUp() {
                 sx={{
                   marginTop: 4,
                   marginBottom: 4,
+                  paddingTop: 2,
+                  paddingBottom: 2,
                   display: 'flex',
                   flexDirection: 'column',
                   alignItems: 'center'
