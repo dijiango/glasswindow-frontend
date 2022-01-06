@@ -1,7 +1,11 @@
+.appContainer  {
+    background-color: rgb(233, 233, 233);
+}
+
 .topbar {
     width: 100%;
     height: 50px;
-    background-color: white;
+    background-color: rgb(110, 240, 149);
 }
 
 .topbarWrapper {
@@ -22,20 +26,19 @@
 
 .others {
     flex: 4;
-    background-color: rgb(191, 230, 241);
 }
 
 /* Sidebar */
 .sidebar {
     flex: 1;
     height: calc(100vh - 50px);
-    background-color: rgb(211, 255, 211);
+    background-color: white;
     position: sticky;
     top: 50px;
 }
 
 .sidebarWrapper {
-    padding: 20px;
+    padding: 10px;
     color: #555;
 }
 
@@ -45,19 +48,22 @@
 
 .sidebarTitle {
     font-size: 13px;
+    text-align: center;
 }
 
 .sidebarList {
     list-style: none;
-    padding: 5px;
+    padding: 0px;
 }
 
 .sidebarListItem {
     padding: 5px;
-    margin: 20px;
+    margin: 10px;
     cursor: pointer;
     display: flex;
     border-radius: 10px;
+    text-align: center;
+    font-size: 13px;
 }
 
 .sidebarListItem:hover {
@@ -65,14 +71,14 @@
 }
 
 .sidebarIcon {
-    margin-right: 5px;
+    margin: 0px 5px 0px;
     font-size: 20px !important;
-
 }
 
 /* Home.js */
 .home {
     flex: 4;
+    margin-top: 30px;
 }
 
 /* HomeView */
@@ -87,6 +93,7 @@
 }
 
 .featuredItem {
+    background-color: white;
     text-align: center;
     flex: 1;
     margin: 0px 20px;

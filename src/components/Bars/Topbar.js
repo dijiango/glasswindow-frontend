@@ -1,4 +1,5 @@
 import React from 'react';
+import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 
 function Topbar() {
     return (
@@ -8,7 +9,9 @@ function Topbar() {
                     <span>App Name goes here</span> 
                 </div> 
                 <div className='topRight'>
-                    <span className=''>Icons {"(Settings, Notifs, Profile Pic)"}</span>
+                    <span className='topbarIcons'>
+                        
+                    </span>
                 </div>
             </div>
         </div>
