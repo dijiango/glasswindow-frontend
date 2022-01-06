@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import { Routes, BrowserRouter, Route } from 'react-router-dom';
 import './App.css';
 import useToken from './useToken';
+import { Paper } from '@mui/material';
 
 import Topbar from './components/Bars/Topbar';
 import Sidebar from './components/Bars/Sidebar';
