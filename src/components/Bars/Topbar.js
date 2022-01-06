@@ -1,5 +1,7 @@
 import React from 'react';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import { IconButton } from '@mui/material';
+import NotificationsIcon from '@mui/icons-material/Notifications';
 
 function Topbar() {
     return (
@@ -10,7 +12,12 @@ function Topbar() {
                 </div> 
                 <div className='topRight'>
                     <span className='topbarIcons'>
-                        
+                        <span className='notifIcon'>
+                            <IconButton><NotificationsIcon sx={{color: 'white'}}/></IconButton>
+                        </span>
+                        <span className='userIcon'>
+                            <IconButton href='/user'><AccountCircleIcon sx={{color: 'white'}}/></IconButton>
+                        </span>    
                     </span>
                 </div>
             </div>

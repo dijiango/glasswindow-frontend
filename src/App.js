@@ -8,14 +8,15 @@ import Sidebar from './components/Bars/Sidebar';
 import Home from './components/YourFiles/Home';
 import Signup from './components/AccountValidation/Signup';
 import Login from './components/AccountValidation/Login';
+import UserProfile from './components/UserProfile';
 import Resumes from './components/YourFiles/Resumes';
 import CoverLetters from './components/YourFiles/CoverLetters';
 import Applications from './components/YourFiles/Applications';
 import SavedJobs from './components/YourFiles/SavedJobs';
-import ResumeBuilder from './CreateNew/ResumeBuilder';
-import CreateCV from './CreateNew/CreateCV';
-import Companies from './Search/Companies';
-import JobSearch from './Search/JobSearch';
+import ResumeBuilder from './components/CreateNew/ResumeBuilder';
+import CreateCV from './components/CreateNew/CreateCV';
+import Companies from './components/Search/Companies';
+import JobSearch from './components/Search/JobSearch';
 
 
 
@@ -49,6 +50,7 @@ function App() {
             <Route path="/yourfiles/resumes" element={<Resumes />} />
             <Route path="/signup" element={<Signup />} />
             <Route path="/login" element={<Login />} />
+            <Route path="/user" element={<UserProfile />} />
             <Route path="/" element={<Home />}/>
             <Route path="*" element={<Home />}/>
           </Routes>
