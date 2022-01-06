@@ -38,7 +38,8 @@ export default function SignUp() {
               
               <Box
                 sx={{
-                  marginTop: 8,
+                  marginTop: 4,
+                  marginBottom: 4,
                   display: 'flex',
                   flexDirection: 'column',
                   alignItems: 'center'
@@ -118,7 +119,6 @@ export default function SignUp() {
                   </Grid>
                 </Box>
               </Box>
-              
             </Container>
           </ThemeProvider>
         </Paper>

@@ -27,6 +27,7 @@
 
 .others {
     flex: 4;
+    max-height: auto;
 }
 
 /* Sidebar */
