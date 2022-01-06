@@ -37,8 +37,8 @@ function App() {
       <div className='others'>
         <BrowserRouter>
           <Routes>
-            <Route path="/search/companies" element={<JobSearch />} />
-            <Route path="/search/jobs" element={<Companies />} />
+            <Route path="/search/jobs" element={<JobSearch />} />
+            <Route path="/search/companies" element={<Companies />} />
 
             <Route path="/create/cv" element={<CreateCV />} />
             <Route path="/create/resume" element={<ResumeBuilder />} />
