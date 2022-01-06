@@ -3,7 +3,7 @@ import React from 'react'
 function Resumes() {
     return (
         <div>
-            Hi
+            Your uploaded resumes
         </div>
     )
 }

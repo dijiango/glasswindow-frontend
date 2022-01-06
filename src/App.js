@@ -1,17 +1,25 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { Routes, BrowserRouter, Route } from 'react-router-dom';
 import './App.css';
 
 import Topbar from './components/Bars/Topbar';
 import Sidebar from './components/Bars/Sidebar';
-import Home from './components/Pages.js/Home';
+import HomePage from './components/Pages/HomePage';
 import Signup from './components/Signup';
-import Login from './components/Login';
-import Resumes from './components/Pages.js/Resumes';
-// import { Breadcrumbs } from '@mui/material';
+import Login from './components/Login/Login';
+import Resumes from './components/Pages/Resumes';
+import useToken from './useToken';
 
 function App() {
+  const { token, setToken } = useToken();
 
+  
+
+  if(!token){
+      return ( <Login setToken={setToken}/>)
+  }
+  else
+  
   return (
   <>
     <Topbar />
@@ -23,8 +31,8 @@ function App() {
             <Route path="/resumes" element={<Resumes />} />
             <Route path="/signup" element={<Signup />} />
             <Route path="/login" element={<Login />} />
-            <Route path="/" element={<Home />}/>
-            <Route path="*" element={<Home />}/>
+            <Route path="/" element={<HomePage />}/>
+            <Route path="*" element={<HomePage />}/>
           </Routes>
         </BrowserRouter>
       </div>

@@ -10,25 +10,38 @@ function Sidebar() {
         <div className='sidebar'>
             <div className='sidebarWrapper'>
                 <div className='sidebarMenu'>
-                    <h3 className='sidebarTitle' style={{marginTop: 0}}>Quick Menu</h3>
+                    <h3 className='sidebarTitle' style={{marginTop: 0}}>Your Files</h3>
                     <ul className='sidebarList'>
                         <li className='sidebarListItem'>
                             <Link underline='none' href={'/'}>
                                 <HomeIcon className='sidebarIcon'/> Home
                             </Link>
-                            
-                        </li>
-                        <li className='sidebarListItem'>
-                            <AutoAwesomeMotionIcon className='sidebarIcon'/> My Resumes and Cover Letters
                         </li>
 
-                        <li className='sidebarListItem'>
-                            <BallotIcon className='sidebarIcon'/> Applications
-                        </li>
+                            <Link underline='none' href={'/resumes'}>
+                                <li className='sidebarListItem'>
+                                    <AutoAwesomeMotionIcon className='sidebarIcon'/> My Resumes
+                                </li>    
+                            </Link>
+
+                            <Link underline='none' href={'/resumes'}>
+                                <li className='sidebarListItem'>
+                                    <AutoAwesomeMotionIcon className='sidebarIcon'/> My Cover Letters
+                                </li>    
+                            </Link>
+                            
+                            <Link underline='none' href={'/'}>
+                                <li className='sidebarListItem'>
+                                    <BallotIcon className='sidebarIcon'/> Applications
+                                </li>    
+                            </Link>
+                            
+                            <Link underline='none' href={'/'}>
+                                <li className='sidebarListItem'>
+                                    <BookmarksIcon className='sidebarIcon'/> Saved Job Listings
+                                </li>    
+                            </Link>
                         
-                        <li className='sidebarListItem'>
-                            <BookmarksIcon className='sidebarIcon'/> Saved Job Listings
-                        </li>
                     </ul>
                         
                 </div>

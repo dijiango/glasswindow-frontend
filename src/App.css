@@ -25,6 +25,7 @@
     background-color: rgb(191, 230, 241);
 }
 
+/* Sidebar */
 .sidebar {
     flex: 1;
     height: calc(100vh - 50px);
@@ -53,6 +54,7 @@
 
 .sidebarListItem {
     padding: 5px;
+    margin: 20px;
     cursor: pointer;
     display: flex;
     border-radius: 10px;

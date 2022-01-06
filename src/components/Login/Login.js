@@ -1,4 +1,6 @@
 import * as React from 'react';
+import { useState, useEffect } from 'react';
+import PropTypes from 'prop-types'
 import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import CssBaseline from '@mui/material/CssBaseline';
@@ -12,8 +14,11 @@ import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+import { Login } from '@mui/icons-material';
 
 function Copyright(props) {
+  
+ 
   return (
     <Typography variant="body2" color="text.secondary" align="center" {...props}>
       {'Copyright © '}
@@ -26,19 +31,38 @@ function Copyright(props) {
   );
 }
 
+async function loginUser(credentials) {
+  return fetch('http://localhost:8080/login', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(credentials)
+  })
+    .then(data => data.json())
+ }
+
 const theme = createTheme();
+export default function SignIn({setToken}) {
+  const [username, setUserName] = useState();
+  const [password, setPassword] = useState();
 
-export default function SignIn() {
-  const handleSubmit = (event) => {
+  const handleSubmit = async(event) => {
     event.preventDefault();
-    const data = new FormData(event.currentTarget);
-    // eslint-disable-next-line no-console
-    console.log({
-      email: data.get('email'),
-      password: data.get('password'),
+    const token = await loginUser({
+      username,
+      password
     });
-  };
-
+    setToken(token);
+    event.target.reset();
+  }
+    // const data = new FormData(event.currentTarget);
+    // eslint-disable-next-line no-console
+    // console.log({
+    //   email: data.get('email'),
+    //   password: data.get('password'),
+    // });
+  ;
   return (
     <ThemeProvider theme={theme}>
       <Container component="main" maxWidth="xs">
@@ -67,6 +91,7 @@ export default function SignIn() {
               name="email"
               autoComplete="email"
               autoFocus
+              onChange={e => setUserName(e.target.value)}
             />
             <TextField
               margin="normal"
@@ -77,6 +102,7 @@ export default function SignIn() {
               type="password"
               id="password"
               autoComplete="current-password"
+              onChange={e => setPassword(e.target.value)}
             />
             <FormControlLabel
               control={<Checkbox value="remember" color="primary" />}
@@ -108,4 +134,7 @@ export default function SignIn() {
       </Container>
     </ThemeProvider>
   );
+}
+Login.propTypes = {
+  setToken: PropTypes.func.isRequired
 }
