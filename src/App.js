@@ -28,6 +28,15 @@ function App() {
   //     return ( <Login setToken={setToken}/>)
   // }
   // else
+
+  const [appliedJob, setAppliedJob] = useState([]);
+  // const [jobArray, setJobArray] = useState([]);
+
+  function savedJob(job) {
+    setAppliedJob([...appliedJob, job]);
+  }
+
+  console.log("you clicked", appliedJob);
   
   return (
   <>
@@ -37,13 +46,13 @@ function App() {
       <div className='others'>
         <BrowserRouter>
           <Routes>
-            <Route path="/search/jobs" element={<JobSearch />} />
+            <Route path="/search/jobs" element={<JobSearch savedJob={savedJob}/>} />
             <Route path="/search/companies" element={<Companies />} />
 
             <Route path="/create/cv" element={<CreateCV />} />
             <Route path="/create/resume" element={<ResumeBuilder />} />
 
-            <Route path="/yourfiles/savedjobs" element={<SavedJobs />} />
+            <Route path="/yourfiles/savedjobs" element={<SavedJobs appliedJob={appliedJob}/>} />
             <Route path="/yourfiles/applications" element={<Applications />} />
             <Route path="/yourfiles/cv" element={<CoverLetters />} />
             <Route path="/yourfiles/resumes" element={<Resumes />} />

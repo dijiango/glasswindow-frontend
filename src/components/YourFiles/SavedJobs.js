@@ -1,10 +1,22 @@
 //job listings api/fake job listings/manual entry 
-import React from 'react'
+import { Paper } from '@mui/material';
+import React, { useState } from 'react';
+import JobCard from '../Search/JobCard';
 
-function SavedJobs() {
+function SavedJobs(props) {
+
+    console.log("This was clicked", props.appliedJob);
     return (
         <div>
-            The jobs you are interested in here
+            {
+                props.appliedJob.map((job)=>{
+                    return (
+                        <Paper elevation={3}>
+                            <JobCard key={job.id} jobInfo={job}/>
+                        </Paper>
+                    )
+                })
+            }
         </div>
     )
 }

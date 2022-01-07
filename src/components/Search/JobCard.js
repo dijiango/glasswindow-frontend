@@ -1,4 +1,4 @@
-import react from 'react'
+import React from 'react';
 
 function JobCard(props){
 
@@ -21,7 +21,7 @@ const applyFunction = (e) => {
         // body: JSON.stringify({name: 'Steve'})
     })
     .then(r => r.json())
-    .then(console.log)
+    .then(data => props.savedJob(data))
     // console.log('something1')
 }
     // .then(response => response.json())

@@ -3,7 +3,7 @@ import JobCard from './JobCard';
 
 
 
-function JobSearch() {
+function JobSearch(props) {
 
     const [jobData, setJobData] = useState([]);
 
@@ -12,13 +12,20 @@ function JobSearch() {
         .then(response => response.json())
         .then(data => setJobData(data))}
     useEffect(fetchFunction, [])
+
+
+
+    function clickedJob(id) {
+        props.savedJob(id);
+    }
+
     return (
         <div>
             {jobData.map(
                 
                 (eachJob) => {
 
-                    return (<JobCard key={eachJob.id} jobInfo={eachJob}/>)
+                    return (<JobCard key={eachJob.id} jobInfo={eachJob} savedJob={clickedJob}/>)
 
 
             })}
