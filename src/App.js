@@ -24,8 +24,6 @@ import JobSearch from './components/Search/JobSearch';
 function App() {
   // const { token, setToken } = useToken();
 
-  
-
   // if(!token){
   //     return ( <Login setToken={setToken}/>)
   // }

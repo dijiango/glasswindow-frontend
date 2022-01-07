@@ -8,22 +8,22 @@ function HomePage() {
                 <div className='featuredItem'>
                     <span className="featuredTitle">Total Files Uploaded</span> 
                     <div className='featuredItemContainer'>
-                        <div># of Cover Letters: </div>
-                        <div># of Resumes: </div>
+                        <div># of Cover Letters: 0</div>
+                        <div># of Resumes: 0</div>
                     </div>
                 </div>
                 
                 <div className='featuredItem'>
                     <span className="featuredTitle">Total Jobs Saved</span> 
                     <div className='featuredItemContainer'>
-                        <div># of Jobs: </div>
+                        <div># of Jobs: 0</div>
                     </div>
                 </div>  
 
                 <div className='featuredItem'>
                     <span className="featuredTitle">Total Applications Sent</span> 
                     <div className='featuredItemContainer'>
-                        <div># of Applications: </div>
+                        <div># of Applications: 0</div>
                     </div>
                 </div>
             </div> 
