@@ -60,6 +60,9 @@ export default function SignIn({setToken}) {
               <Box
                 sx={{
                   marginTop: 8,
+                  marginBottom: 8,
+                  paddingTop: 2,
+                  paddingBottom: 2,
                   display: 'flex',
                   flexDirection: 'column',
                   alignItems: 'center',
