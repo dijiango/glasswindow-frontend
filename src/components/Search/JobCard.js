@@ -44,15 +44,15 @@ const applyFunction = (e) => {
 
 return(
 
-
-
 <div className='card'>
-    <h1>{props.jobInfo.title}</h1>
-    <p>{props.jobInfo.company.name}</p>
     <img className='company-logo' src={props.jobInfo.company.image_url}></img>
-    <button onClick={applyFunction}>Apply</button>
-    <button onClick={() => deleteFunction()}>Not Interested</button>
-
+    <span className='card-info'>
+        <h1>{props.jobInfo.title}</h1>
+        <p>{props.jobInfo.company.name}</p>
+        <button onClick={applyFunction}>Apply</button>
+        <button onClick={() => deleteFunction()}>Not Interested</button>
+    </span>
+    
 </div>
 
 
