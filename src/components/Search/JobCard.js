@@ -1,5 +1,10 @@
 import React from 'react';
 
+const bttnStyle = {
+    margin: '25px 5px',
+    padding: '5px'
+}
+
 function JobCard(props){
 
 const applyFunction = (e) => {
@@ -49,8 +54,8 @@ return(
     <span className='card-info'>
         <h1>{props.jobInfo.title}</h1>
         <p>{props.jobInfo.company.name}</p>
-        <button onClick={applyFunction}>Apply</button>
-        <button onClick={() => deleteFunction()}>Not Interested</button>
+        <button onClick={applyFunction} style={bttnStyle}>Apply</button>
+        <button onClick={() => deleteFunction()} style={bttnStyle}>Not Interested</button>
     </span>
     
 </div>
