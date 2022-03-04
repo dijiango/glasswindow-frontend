@@ -79,13 +79,9 @@
 /* JobCard.js */
 .card{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    /* margin-left: 260px; */
-    /* width: 500px;
-    height: 500px; */
-    /* flex: 4; */
     margin: 50px;
     padding: 25px;
-    /* align-items: center; */
+    background-color: white;
 
 
     border-radius: 10px;
