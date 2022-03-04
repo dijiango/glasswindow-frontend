@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import JobCard from './JobCard';
+import JobSearchBar from './JobSearchBar';
 
 
 
@@ -21,6 +22,7 @@ function JobSearch(props) {
 
     return (
         <div>
+            <JobSearchBar />
             {jobData.map(
                 
                 (eachJob) => {
