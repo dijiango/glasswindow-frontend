@@ -1,7 +1,7 @@
 import React from 'react';
 
 const bttnStyle = {
-    margin: '25px 5px',
+    margin: '25px 10px 25px 0px',
     padding: '5px'
 }
 
