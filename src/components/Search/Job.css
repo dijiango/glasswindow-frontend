@@ -1,0 +1,70 @@
+.job-searchbar-container {
+    text-align: center;
+    background-color: white;
+}
+
+.card{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 50px;
+    padding: 25px;
+    background-color: white;
+
+
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+}
+
+.card:hover, .hvr-grow:focus, .hvr-grow:active {
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+  }
+
+.card-preview {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.card-left {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    flex-basis: auto;
+}
+
+.card-right {
+    display: flex;
+    flex-direction: column;
+    flex: 2;
+}
+
+h3 {
+    color: rgb(84, 136, 84);
+}
+
+aside {
+    color: gray;
+    text-align: right;
+}
+
+h4 {
+    color: gray;
+    font-weight: normal;
+    margin: 5px;
+}
+
+/* .bttn{
+
+}
+
+.company-logo {
+    display: inline-block;
+    height: 200px;
+} */

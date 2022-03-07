@@ -51,13 +51,25 @@ return(
 
 <div className='card'>
     {/* <img className='company-logo' src={props.job.company.image_url}></img> */}
-    <span className='card-info'>
-        <h1>{props.job.title}</h1>
-        <p>{props.job.company.name}</p>
-        <button onClick={applyFunction} style={bttnStyle}>Apply</button>
-        <button onClick={() => deleteFunction()} style={bttnStyle}>Not Interested</button>
-    </span>
-    
+    <div className='card-preview'>
+        <div className='card-left'>
+            <div>
+                <h1>{props.job.title}</h1>
+                <h3>{props.job.company.name}</h3> 
+                <h4>Date Uploaded</h4>
+
+                <button onClick={applyFunction} style={bttnStyle}>Apply</button>
+                <button onClick={() => deleteFunction()} style={bttnStyle}>Not Interested</button>
+            </div>
+        </div>
+        <div className='card-right'>
+                <aside>
+                    <h4>{props.job.employment_type}</h4>
+                    <h4> {props.job.location}, USA</h4>
+                    <h4>Education Level: {props.job.education} degree</h4>
+                </aside>
+        </div>
+    </div>
 </div>
 
 
