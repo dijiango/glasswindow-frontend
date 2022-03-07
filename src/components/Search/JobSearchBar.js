@@ -1,5 +1,5 @@
 import React from 'react'
-import './JobSearch.css';
+import './Job.css';
 
 
 function JobSearchBar() {

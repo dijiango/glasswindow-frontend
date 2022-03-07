@@ -13,7 +13,7 @@ const applyFunction = (e) => {
     // fetch('http://localhost:9292/applies',{
     //     method: 'POST',
     //     headers: {'Content-Type': 'application/json'},
-    //     body: JSON.stringify({ user_id: 20, job_id: props.jobInfo.id })
+    //     body: JSON.stringify({ user_id: 20, job_id: props.job.id })
     // })
     // .then(response => response.json())
     // .then(data => console.log('success:', data));
@@ -22,7 +22,7 @@ const applyFunction = (e) => {
     fetch('http://localhost:9292/applies',{
         method: 'POST',
         headers: {'Content-Type': 'application/json'},
-        body: JSON.stringify({ user_id: 20, job_id: props.jobInfo.id })
+        body: JSON.stringify({ user_id: 20, job_id: props.job.id })
         // body: JSON.stringify({name: 'Steve'})
     })
     .then(r => r.json())
@@ -34,7 +34,7 @@ const applyFunction = (e) => {
 
 
     const deleteFunction = () => {
-        let id = props.jobInfo.id
+        let id = props.job.id
         fetch(`http://localhost:9292/jobs/${id}`,{
         method: 'DELETE',
         headers: {'Content-Type': 'application/json'},
@@ -50,10 +50,10 @@ const applyFunction = (e) => {
 return(
 
 <div className='card'>
-    <img className='company-logo' src={props.jobInfo.company.image_url}></img>
+    {/* <img className='company-logo' src={props.job.company.image_url}></img> */}
     <span className='card-info'>
-        <h1>{props.jobInfo.title}</h1>
-        <p>{props.jobInfo.company.name}</p>
+        <h1>{props.job.title}</h1>
+        <p>{props.job.company.name}</p>
         <button onClick={applyFunction} style={bttnStyle}>Apply</button>
         <button onClick={() => deleteFunction()} style={bttnStyle}>Not Interested</button>
     </span>

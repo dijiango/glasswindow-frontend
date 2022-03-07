@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from 'react'
+import './Job.css';
 import JobCard from './JobCard';
 import JobSearchBar from './JobSearchBar';
 
@@ -27,7 +28,7 @@ function JobSearch(props) {
                 
                 (eachJob) => {
 
-                    return (<JobCard key={eachJob.id} jobInfo={eachJob} savedJob={clickedJob}/>)
+                    return (<JobCard key={eachJob.id} job={eachJob} savedJob={clickedJob}/>)
 
 
             })}
