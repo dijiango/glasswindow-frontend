@@ -1,4 +1,5 @@
 import React from 'react';
+import './Bars.css';
 import { Link } from '@material-ui/core';
 import HomeIcon from '@mui/icons-material/Home';
 import AutoAwesomeMotionIcon from '@mui/icons-material/AutoAwesomeMotion';

@@ -1,4 +1,5 @@
 import React from 'react';
+import './Bars.css';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import { IconButton } from '@mui/material';
 import NotificationsIcon from '@mui/icons-material/Notifications';
