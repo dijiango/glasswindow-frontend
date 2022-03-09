@@ -1,66 +1,59 @@
-import React from 'react';
+import React, { useState } from 'react';
+import DoNotDisturbIcon from '@mui/icons-material/DoNotDisturb';
+import { IconButton, Tooltip } from '@mui/material';
+import BookmarkIcon from '@mui/icons-material/Bookmark';
 
-const bttnStyle = {
-    margin: '25px 10px 25px 0px',
-    padding: '5px'
-}
+// const bttnStyle = {
+//     margin: '25px 10px 25px 0px',
+//     padding: '5px'
+// }
 
-function JobCard(props){
+function JobCard(props) {
 
-const applyFunction = (e) => {
-    e.preventDefault();
-
-    // fetch('http://localhost:9292/applies',{
-    //     method: 'POST',
-    //     headers: {'Content-Type': 'application/json'},
-    //     body: JSON.stringify({ user_id: 20, job_id: props.job.id })
-    // })
-    // .then(response => response.json())
-    // .then(data => console.log('success:', data));
-
-    
+    const applyFunction = (jobID) => {
     fetch('http://localhost:9292/applies',{
         method: 'POST',
         headers: {'Content-Type': 'application/json'},
-        body: JSON.stringify({ user_id: 20, job_id: props.job.id })
-        // body: JSON.stringify({name: 'Steve'})
+        body: JSON.stringify({job_id: jobID})
     })
-    .then(r => r.json())
-    .then(data => props.savedJob(data))
-    // console.log('something1')
-}
     // .then(response => response.json())
-    // .then( data => console.log(data))}
+    // .then(data => setSavedJobsArr(data));
+    }
 
 
-    const deleteFunction = () => {
-        let id = props.job.id
+    const deleteFunction = (id) => {
         fetch(`http://localhost:9292/jobs/${id}`,{
         method: 'DELETE',
         headers: {'Content-Type': 'application/json'},
-        
-       
     })
-    window.location.reload()}
+    window.location.reload()
+    }
     // .then(r => r.json())
     // .then(console.log)
 
 
 
-return(
+return (
 
 <div className='card'>
     {/* <img className='company-logo' src={props.job.company.image_url}></img> */}
     <div className='card-preview'>
         <div className='card-left'>
-            <div>
+            <div className='quick-actions'>
                 <h1>{props.job.title}</h1>
+                <Tooltip title="Not Interested">
+                    <IconButton onClick={() => deleteFunction(props.job.id)}><DoNotDisturbIcon className='save-bttn'/></IconButton>
+                </Tooltip>
+                <Tooltip title="Save">
+                    <IconButton onClick={() => applyFunction(props.job.id)}><BookmarkIcon className='save-bttn'/></IconButton>
+                </Tooltip>
+            </div>
+            <div className='job-info'>
                 <h3>{props.job.company.name}</h3> 
                 <h4>Date Uploaded</h4>
-
-                <button onClick={applyFunction} style={bttnStyle}>Apply</button>
-                <button onClick={() => deleteFunction()} style={bttnStyle}>Not Interested</button>
             </div>
+                
+
         </div>
         <div className='card-right'>
                 <aside>
@@ -71,7 +64,5 @@ return(
         </div>
     </div>
 </div>
-
-
 )}
 export default JobCard;

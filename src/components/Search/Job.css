@@ -1,6 +1,6 @@
-.job-searchbar-container {
-    text-align: center;
-    background-color: white;
+.search-page {
+    overflow-y: scroll;
+    max-height: 92vh;
 }
 
 .card{
@@ -45,6 +45,10 @@
     flex: 2;
 }
 
+h1 {
+    display: inline-block;
+    margin-right: 10px;
+}
 h3 {
     color: rgb(84, 136, 84);
 }
@@ -60,11 +64,21 @@ h4 {
     margin: 0px 0px 5px;
 }
 
-/* .bttn{
-
+.quick-actions {
+    display: flex;
+    align-items: center;
+}
+.save-bttn{
+  color: green;
 }
 
-.company-logo {
+/* .company-logo {
     display: inline-block;
     height: 200px;
 } */
+
+/* JobSearch Page */
+.job-searchbar-container {
+    text-align: center;
+    background-color: white;
+}

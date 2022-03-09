@@ -17,21 +17,20 @@ function JobSearch(props) {
 
 
 
-    function clickedJob(id) {
-        props.savedJob(id);
-    }
+    // function saveJob(id) {
+    //     props.saveJob(id);
+    // }
 
     return (
         <div>
             <JobSearchBar />
+        <div className='search-page'>
             {jobData.map(
-                
                 (eachJob) => {
-
-                    return (<JobCard key={eachJob.id} job={eachJob} savedJob={clickedJob}/>)
-
-
-            })}
+                    return (<JobCard key={eachJob.id} job={eachJob} />)
+                }
+            )}
+        </div>
         </div>
     )
 }

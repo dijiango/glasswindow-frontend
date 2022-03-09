@@ -1,24 +1,30 @@
 //job listings api/fake job listings/manual entry 
 import { Paper } from '@mui/material';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import JobCard from '../Search/JobCard';
 
 function SavedJobs(props) {
+    const [savedJobsArr, setSavedJobsArr] = useState([]);
 
-    console.log("This was clicked", props.appliedJob);
-    return (
+    useEffect(() => {
+        fetch("http://localhost:9292/applies")
+        .then(response => response.json())
+        .then(jobs => setSavedJobsArr(jobs))
+    }, []);
+
+    console.log(savedJobsArr);
+
+    return (savedJobsArr.length > 0) ? (
         <div>
             {
-                props.appliedJob.map((job)=>{
+                savedJobsArr.map((saved)=>{
                     return (
-                        <Paper elevation={3}>
-                            <JobCard key={job.id} jobInfo={job}/>
-                        </Paper>
+                            <JobCard key={saved.job_id} job={saved.job}/>
                     )
                 })
             }
         </div>
-    )
+    ) : <div><h2>Jobs you save will appear here.</h2></div> 
 }
 
 export default SavedJobs

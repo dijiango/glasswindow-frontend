@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import { Routes, BrowserRouter, Route } from 'react-router-dom';
 import './App.css';
 import useToken from './useToken';
@@ -29,30 +29,24 @@ function App() {
   // }
   // else
 
-  const [appliedJob, setAppliedJob] = useState([]);
+
   // const [jobArray, setJobArray] = useState([]);
-
-  function savedJob(job) {
-    setAppliedJob([...appliedJob, job]);
-  }
-
-  console.log("you clicked", appliedJob);
   
   return (
-  <>
+  <div className='appWrapper'>
     <Topbar />
     <div className='appContainer'>
       <Sidebar />
       <div className='others'>
         <BrowserRouter>
           <Routes>
-            <Route path="/search/jobs" element={<JobSearch savedJob={savedJob}/>} />
+            <Route path="/search/jobs" element={<JobSearch />} />
             <Route path="/search/companies" element={<Companies />} />
 
             <Route path="/create/cv" element={<CreateCV />} />
             <Route path="/create/resume" element={<ResumeBuilder />} />
 
-            <Route path="/yourfiles/savedjobs" element={<SavedJobs appliedJob={appliedJob}/>} />
+            <Route path="/yourfiles/savedjobs" element={<SavedJobs />} />
             <Route path="/yourfiles/applications" element={<Applications />} />
             <Route path="/yourfiles/cv" element={<CoverLetters />} />
             <Route path="/yourfiles/resumes" element={<Resumes />} />
@@ -68,7 +62,7 @@ function App() {
    
     
    
-  </> 
+  </div> 
   )
 
 }

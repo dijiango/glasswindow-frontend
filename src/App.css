@@ -1,6 +1,8 @@
+.appWrapper {
+    height: 100%;
+}
 .appContainer  {
     background-color: rgb(233, 233, 233);
-    height: 100%;
 }
 
 .appContainer {
@@ -9,5 +11,4 @@
 
 .others {
     flex: 4;
-    max-height: auto;
 }
