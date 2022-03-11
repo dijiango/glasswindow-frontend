@@ -2,6 +2,7 @@ import React from 'react';
 import StarOutlineIcon from '@mui/icons-material/StarOutline';
 import StarRateIcon from '@mui/icons-material/StarRate';
 import StarHalfIcon from '@mui/icons-material/StarHalf';
+import { Tooltip } from '@mui/material';
 
 function StarRating({starsNum}) {
 
@@ -12,7 +13,7 @@ function StarRating({starsNum}) {
     <span>
         {
             [...new Array(totalStars)].map((arr, index)=>{
-                return index < activeStars ? <StarRateIcon /> : <StarOutlineIcon />   
+                return <Tooltip title={`employees rated working at this company ${activeStars} stars out of 5`}>{index < activeStars ? <StarRateIcon /> : <StarOutlineIcon />}</Tooltip>   
             })
         }
     </span>

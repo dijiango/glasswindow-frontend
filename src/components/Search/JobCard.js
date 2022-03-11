@@ -17,13 +17,11 @@ function JobCard(props) {
     const [isPreview, setIsPreview] = useState(true);
 
     const applyFunction = (jobID) => {
-        // if (props.savedJobs.filter(job => job !== jobID)) {
-        //     fetch('http://localhost:9292/applies',{
-        //     method: 'POST',
-        //     headers: {'Content-Type': 'application/json'},
-        //     body: JSON.stringify({job_id: jobID})
-        //     })
-        // } else console.log("This job was already saved.");
+            fetch('http://localhost:9292/applies',{
+            method: 'POST',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify({job_id: jobID})
+            })
     }
 
 
