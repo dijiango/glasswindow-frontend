@@ -8,6 +8,7 @@ import JobSearchBar from './JobSearchBar';
 function JobSearch(props) {
 
     const [jobData, setJobData] = useState([]);
+    const [savedJobs, setSavedJobs] = useState([]);
 
     const fetchFunction = () => {
         fetch('http://localhost:9292/jobs')
@@ -15,8 +16,14 @@ function JobSearch(props) {
         .then(data => setJobData(data))}
     useEffect(fetchFunction, [])
 
+    
+    useEffect(()=> {
+        fetch('http://localhost:9292/applies')
+        .then(response => response.json())
+        .then(obj => setSavedJobs(obj));
+    }, []);
 
-
+    console.log(savedJobs[1].id);
     // function saveJob(id) {
     //     props.saveJob(id);
     // }
@@ -27,7 +34,7 @@ function JobSearch(props) {
         <div className='search-page'>
             {jobData.map(
                 (eachJob) => {
-                    return (<JobCard key={eachJob.id} job={eachJob} />)
+                    return (<JobCard key={eachJob.id} job={eachJob} savedJobs={savedJobs}/>)
                 }
             )}
         </div>

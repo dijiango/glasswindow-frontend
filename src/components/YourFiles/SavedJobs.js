@@ -19,7 +19,7 @@ function SavedJobs(props) {
             {
                 savedJobsArr.map((saved)=>{
                     return (
-                            <JobCard key={saved.job_id} job={saved.job}/>
+                            <JobCard key={saved.id} job={saved.job}/>
                     )
                 })
             }
