@@ -1,6 +1,7 @@
 .search-page {
     overflow-y: scroll;
-    max-height: 92vh;
+    min-height: 78vh;
+    max-height: 83vh;
 }
 
 .card-wrapper{
@@ -234,7 +235,28 @@ h4 {
 
 
 /* JobSearch Page */
+
 .job-searchbar-container {
     text-align: center;
-    background-color: white;
+}
+
+.searchbar-label {
+    color: green;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.error {
+    margin: 0px 25px 10px 0px;
+}
+
+.refresh {
+    color: rgb(104, 182, 104);
+    font-style: italic;
+    text-decoration: underline;
+    margin: 0px 25px 10px 0px;
+}
+
+.refresh:hover {
+    cursor: pointer;
 }
