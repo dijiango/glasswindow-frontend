@@ -23,8 +23,8 @@ function JobSearchBar( props ) {
   function handleSubmit(e) {
     e.preventDefault();
     props.handleFilter(values);
-    setValues(defaultValues);
   }
+
   return (
     <div className='job-searchbar-wrapper'>
       <Paper className='job-searchbar-container' elevation={0}>
