@@ -96,7 +96,7 @@ return (isPreview) ? (
         </section>
         <section className='expanded-description'>
             <header className='description-header'>Job Description</header>
-            <article>Lorem Ipsum</article>
+            <article className='job-description'>{props.job.description}</article>
         </section>
         <section className='expanded-bttn-group'>
             <button className='expanded-bttns' onClick={() => applyFunction(props.job.id)}>Save this Job</button>

@@ -95,6 +95,13 @@ h4 {
     flex-direction: column;
     flex-wrap: wrap;
     color: gray;
+    font-size: 20px;
+}
+
+.job-description {
+    width: 100%;
+    color: gray;
+    font-size: 20px;
 }
 
 .description-header {
