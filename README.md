@@ -1,6 +1,6 @@
 # Glass Window
 
-Glass Window is a full-stack ReactJS application. It features a [Sinatra API](https://github.com/dijiango/glasswindow-backend) that is accessed by the client.
+Glass Window is a full-stack ReactJS application. It features a [Sinatra API](https://github.com/dijiango/glasswindow-backend) that is accessed by the frontend client.
 
 ## Technologies Used
 
